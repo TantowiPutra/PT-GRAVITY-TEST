@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Data Mahasiswa</title>
+
+    <!-- Menggunakan Internal CSS -->
+    <style>
+        * {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Styling Border table */
+        table, th, td {
+            padding: 4px 50px 4px 50px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .table-header th {
+            font-weight: 500; /* Font Table Tidak Bold*/
+            background-color: rgb(170, 170, 170);
+        }
+
+        /* Styling untuk Konten/Data utama dari Tabel */
+        .table-content th {
+            font-weight: 500; /* Font Table Tidak Bold*/
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <!-- Table Header -->
+            <thead>
+                <tr class="table-header">
+                    <!-- Menggunakan Attribut colspan untuk merge tiga (3) buah kolom cell tabel -->
+                    <th colspan="3">Data Mahasiswa</th>
+                    <!-- Menggunakan Atribut rowspan untuk merge dua (2) buah baris cell tabel -->
+                    <th rowspan="2">
+                        <div style="margin-bottom: 3px;">Total</div>
+                        <div>SKS</div>
+                    </th>
+                </tr>
+    
+                <tr class="table-header">
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+
+            <!-- Table Content -->
+            <tbody>
+                <tr class="table-content">
+                    <th>100-001</th>
+                    <th>Budianto </th>
+                    <th>Sistem Informasi</th>
+                    <th>100</th>
+                </tr>
+                <tr class="table-content">
+                    <th>100-005</th>
+                    <th>Ari</th>
+                    <th>Managemen</th>
+                    <th>150</th>
+                </tr>
+                <tr class="table-content">
+                    <th>100-012</th>
+                    <th>Setiawan</th>
+                    <th>Akutansi</th>
+                    <th>45</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

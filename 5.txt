@@ -1,0 +1,108 @@
+/* Create table players */
+CREATE TABLE `players` (
+  `Player_No` int(11) NOT NULL,
+  `Name` varchar(255) NOT NULL
+)
+
+/* Create table scores */
+CREATE TABLE `scores` (
+  `Player_No` int(11) NOT NULL,
+  `Sport` varchar(255) NOT NULL,
+  `Score` int(11) NOT NULL
+)
+
+/* Insert table players */
+INSERT INTO 
+	players(Player_No, Name) 
+VALUES 
+	(1, 'Alger'), 
+	(2, 'Lane'), 
+	(3, 'Alger');
+
+/* Insert table scores */
+INSERT INTO scores(Player_No, Sport, Score) 
+VALUES 
+	(1, 'Chess', 16), 
+	(1, 'Swimming', 14), 
+	(2, 'Chess', 15), 
+	(3, 'Swimming', 16), 
+	(2, 'Sprint', 13), 
+	(3, 'Chess', 16);
+
+/* a */
+SELECT * 
+FROM scores 
+ORDER BY score ASC;
+
+SELECT * 
+FROM scores 
+ORDER BY score DESC;
+
+
+/* b */
+INSERT INTO 
+	players(Player_No, Name) 
+VALUES 
+	(4, "Tantowi"), 
+	(5, "Putra");
+
+INSERT INTO 
+	scores(Player_No, Sport, Score) 
+VALUES 
+	(4, "Basket", 100), 
+	(5, "Soccer", 99);
+
+/* c */
+UPDATE 
+	players 
+SET 
+	Name = "Tantowi Update Name" 
+WHERE Player_No = 4;
+
+/* d */
+SELECT 
+	MAX (Score) 
+FROM scores;
+
+SELECT 
+	MIN(Score) 
+FROM scores;
+
+SELECT 
+SUM(Score) 
+ FROM 
+scores;
+
+SELECT 
+	Sport, 
+	SUM(Score) 
+FROM 
+	scores 
+GROUP BY 
+	Sport;
+
+/* e */
+SELECT * 
+FROM 
+	players p JOIN scores s 
+		ON p.Player_No = s.Player_No;
+
+/* f */
+DELETE 
+FROM 
+	scores 
+WHERE 
+	Sport = 'Chess'
+
+
+
+
+
+
+
+
+
+
+
+
+
